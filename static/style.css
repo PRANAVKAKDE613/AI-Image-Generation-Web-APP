@@ -1,0 +1,114 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fotor.com%2Ffeatures%2Fbackground-generator%2F&psig=AOvVaw2OEaKCCLh29Ly4uo0Z2I-r&ust=1744743311947000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDh2b6Z2IwDFQAAAAAdAAAAABAE') no-repeat center center fixed;
+    background-size: cover; /* Makes the background image cover the whole screen */
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container to center content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Input field Styling */
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Image Styling */
+img {
+    max-width: 70%; /* Limit the width of the generated image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Download Button Styling */
+a button {
+    background-color: #008CBA;
+    color: white;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+a button:hover {
+    background-color: #007B9D;
+}
+
+/* Error Message Styling */
+p.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%;
+    }
+}

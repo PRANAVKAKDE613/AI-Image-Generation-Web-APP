@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Image from Prompt</h1>
+        
+        <!-- Image Generation Form -->
+        <form method="POST">
+            <label for="prompt">Enter prompt:</label>
+            <input type="text" id="prompt" name="prompt" required>
+            <button type="submit">Generate</button>
+        </form>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if image_url %}
+        <h2>Generated Image:</h2>
+        <img src="{{ image_url }}" alt="Generated Image">
+
+        <!-- Download Button -->
+        <br>
+        <a href="{{ url_for('download_image', image_url=image_url) }}" download>
+            <button>Download Image</button>
+        </a>
+        {% endif %}
+    </div>
+</body>
+</html>
